@@ -1,7 +1,7 @@
 package Compactando;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 public class CompactandoArquivo {
@@ -16,7 +16,9 @@ public class CompactandoArquivo {
 		 byte[] buffer = new byte[1024];
 		 
 		 try {
-			 GZIPOutputStream gos = new GZIPOutputStream(new FileOutputStream("/home/alienmj/arquivo/file.gz"));
+			 GZIPOutputStream gos = new GZIPOutputStream(new FileOutputStream("/home/alienmj/arquivos/file.gz"));
+			 FileInputStream file = new FileInputStream("/home/alienmj/arquivos.txt");
+			 
 			 
 		 }catch (Exception e) {
 			 e.printStackTrace();

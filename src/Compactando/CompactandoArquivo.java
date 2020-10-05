@@ -16,14 +16,17 @@ public class CompactandoArquivo {
 		 byte[] buffer = new byte[1024];
 		 
 		 try {
+			 FileInputStream file = new FileInputStream("/home/alienmj/arquivos/arquivo.txt");
 			 GZIPOutputStream gos = new GZIPOutputStream(new FileOutputStream("/home/alienmj/arquivos/file.gz"));
-			 FileInputStream file = new FileInputStream("/home/alienmj/arquivos.txt");
 			 
 			 int length;
 			 while((length = file.read(buffer)) > 0) {
 				 gos.write(buffer, 0, length);
 			 }
 			 
+			 file.close();
+			 gos.close();
+			 System.out.println("Arquivo comprimido com sucesso");
 			 
 		 }catch (Exception e) {
 			 e.printStackTrace();

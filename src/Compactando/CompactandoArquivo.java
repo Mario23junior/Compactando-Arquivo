@@ -19,6 +19,11 @@ public class CompactandoArquivo {
 			 GZIPOutputStream gos = new GZIPOutputStream(new FileOutputStream("/home/alienmj/arquivos/file.gz"));
 			 FileInputStream file = new FileInputStream("/home/alienmj/arquivos.txt");
 			 
+			 int length;
+			 while((length = file.read(buffer)) > 0) {
+				 
+			 }
+			 
 			 
 		 }catch (Exception e) {
 			 e.printStackTrace();

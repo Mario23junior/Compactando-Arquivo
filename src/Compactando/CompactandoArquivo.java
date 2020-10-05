@@ -21,7 +21,7 @@ public class CompactandoArquivo {
 			 
 			 int length;
 			 while((length = file.read(buffer)) > 0) {
-				 
+				 gos.write(buffer, 0, length);
 			 }
 			 
 			 
